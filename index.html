@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Guess Me</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Guess Me</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Play</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html#contact-us">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Company
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="company.html">Company Gallery</a></li>
+              <li><a class="dropdown-item" href="company.html#members">Members of the company</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <img src="img/layout/logo.png" />
+    <h1>Guess Who</h1>
+  </header>
+
+  <main>
+    <section class="game-start">
+      <h2>Think of Someone...</h2>
+      <button class="btn btn-start">I'm Ready!</button>
+    </section>
+
+    <section class="quest" style="display: none">
+      <h2 class="question"></h2>
+      <button class="btn btn-yes">Yes</button>
+      <button class="btn btn-no">No</button>
+    </section>
+
+    <section class="new-quest" style="display: none">
+      <h2>OK, I gave up...</h2>
+
+      <form class="ending-form">
+        <label for="newGuess">You thought of: </label>
+        <input required name="newGuess" type="txt" id="newGuess" placeholder="Your Guess">
+
+        <label for="newQuest">Question to differentiate:</label>
+        <input name="newQuest" type="txt" id="newQuest" placeholder="The answer is YES for yours" required />
+
+        <button type="submit" class="btn btn-add-guess">Make me Smarter!</button>
+      </form>
+    </section>
+
+    <section class="win" style="display: none">
+      <h2 style="color: gold;"> I WON! </h2>
+      <h3>Try again and you might beat me..</h3>
+      <button class="btn btn-restart">Play Again</button>
+    </section>
+  </main>
+
+  <footer>CoffeRights &copy; 2021</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="lib/jquery/jquery.js"></script>
+  <script src="js/services/utils.js"></script>
+  <script src="js/services/quest.service.js"></script>
+  <script src="js/quest.controller.js"></script>
+</body>
+
+</html>
